@@ -1,1 +1,11 @@
-<%= @company.name %>
+<%= form_tag("/startups", method: "get") do %>
+    <%= label_tag(:query, "Search for:") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+
+<% unless @companies.nil? %>
+    <% @companies.each do |company| %>
+        <%= company.name %>
+    <% end %>
+<% end %>

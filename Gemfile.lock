@@ -36,8 +36,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    crunchbase-api (0.2.0)
-      json
+    crunchbase_v2 (0.0.8)
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
@@ -112,7 +111,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  crunchbase-api
+  crunchbase_v2
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.8)
