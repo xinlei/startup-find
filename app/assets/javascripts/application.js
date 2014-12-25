@@ -12,5 +12,28 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require Chart
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    var graph_data = $('.graph_data').data('data');
+    console.log(graph_data);
+    var data = {
+        labels: ["A", "B", "C", "D"],
+        datasets: [
+            {
+                label: "Facebook",
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,0.8)",
+                highlightFill: "rgba(220,220,220,0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data: null
+            }
+        ]
+    };
+    data["datasets"][0]["data"] = graph_data;
+    var ctx = $("#chart").get(0).getContext("2d");
+    var chart = new Chart(ctx).Bar(data);
+});
+
