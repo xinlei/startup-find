@@ -1,0 +1,14 @@
+<table id="header">
+  <tr id="row-1">
+    <td><h1>StartupFind</h1></td>
+  </tr>
+  <tr id="row-2">
+    <td>
+      <%= form_tag("/startups/search", :method => "get", :class => "form-inline") do %>
+          <%= label_tag(:query, "Search for:") %>
+          <%= text_field_tag(:query) %>
+          <%= submit_tag("Search", id: "submit-button") %>
+      <% end %>
+    </td>
+  </tr>
+</table>

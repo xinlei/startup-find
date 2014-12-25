@@ -18,9 +18,11 @@
 
 $(document).ready(function() {
     var graph_data = $('.graph_data').data('data');
+    var graph_label = $('.graph_label').data('data');
+
     console.log(graph_data);
     var data = {
-        labels: ["A", "B", "C", "D"],
+        labels: null,
         datasets: [
             {
                 label: "Facebook",
@@ -33,6 +35,8 @@ $(document).ready(function() {
         ]
     };
     data["datasets"][0]["data"] = graph_data;
+    data["labels"] = graph_label;
+
     var ctx = $("#chart").get(0).getContext("2d");
     var chart = new Chart(ctx).Bar(data);
 });

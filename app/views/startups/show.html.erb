@@ -1,4 +1,10 @@
 <%= content_tag :div, class: "graph_data", data: {data: @data} do %>
 <% end %>
 
-<canvas id="chart" width="400" height="400"></canvas>
+<%= content_tag :div, class: "graph_label", data: {data: @label} do %>
+<% end %>
+
+<div id="results"><h3>Funding History for <%= @query %></h3></div>
+<canvas id="chart" width="800" height="400"></canvas>
+
+
