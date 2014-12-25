@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :startups
+  resources :startups, :collection => {:search => :get}
 
   root 'startups#index'
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
