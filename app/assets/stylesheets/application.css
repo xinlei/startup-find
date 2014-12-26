@@ -14,34 +14,35 @@
  *= require_self
  */
 
-body {margin: 0;}
+body {margin: 0}
 
-#header {width: 100%; border-width: 0; border-collapse: collapse;}
+.header {border-width: 0; border-collapse: collapse;}
 
-#row-1 {height: 80px; background-color: #0192C9;}
+#expand {width: 100%}
+
+#row-1 {height: 80px; background-color: grey;}
+
+#row-1:hover {background-color: #A35263}
 
 #row-1 td {padding-left: 25px; color: white; font-family: 'Hammersmith One', sans-serif}
 
-#row-2 {height: 50px; background-color: #00B4CF;}
+#row-2 {height: 50px; background-color: grey;}
 
 #row-2 td {text-align: center; color: white; font-weight: bold; font-family: 'Quattrocento Sans', sans-serif}
 
-#submit-button {color: white; background-color: grey; border: 0; width: 100px; height: 20px;}
+#submit-button {color: white; background-color: #A35263; border: 0; width: 100px; height: 20px;}
 
-#submit-button:hover {background-color: #A35263; cursor: pointer;}
+#submit-button:hover {cursor: pointer;}
 
 #query {width: 25%}
 
-#chart{
-    padding-top: 10px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
+#chart{ padding-top: 10px; padding-left: 0; padding-right: 0; padding-bottom: 10px; margin-left: auto;
+    margin-right: auto; display: block;}
 
 h3 {font-family: 'Quattrocento Sans', sans-serif}
 
 #results {text-align: center;}
+
+.navigation {width: auto; white-space:nowrap; padding-right: 25px;}
+
+.navigation:hover {text-decoration: underline; cursor: pointer}

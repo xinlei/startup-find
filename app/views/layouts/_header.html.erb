@@ -1,13 +1,19 @@
-<table id="header">
+<table class="header">
   <tr id="row-1">
-    <td><h1>StartupFind</h1></td>
+    <td id="expand"><h1>StartupFind</h1></td>
+    <td class="navigation"><h2>Organization</h2></td>
+    <td class="navigation"><h2>People</h2></td>
+    <td class="navigation"><h2>Product</h2></td>
   </tr>
+  </table>
+<table class="header" id="expand">
   <tr id="row-2">
     <td>
       <%= form_tag("/startups/search", :method => "get", :class => "form-inline") do %>
           <%= label_tag(:query, "Search for:") %>
-          <%= text_field_tag(:query) %>
-          <%= submit_tag("Search", id: "submit-button") %>
+          <%= text_field_tag(:query, "Enter organization name") %>
+          <%= text_field_tag(:api_key, "Enter api key") %>
+          <%= submit_tag("Add to Chart", id: "submit-button") %>
       <% end %>
     </td>
   </tr>
